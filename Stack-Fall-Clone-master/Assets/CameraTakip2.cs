@@ -7,7 +7,7 @@ public class CameraTakip2 : MonoBehaviour
     private Vector3 cameraPos;
     private Transform player, win;
 
-    private float cameraOffset;
+    private float cameraOffset = 4f;
 
 
     private void Awake()
@@ -28,9 +28,10 @@ public class CameraTakip2 : MonoBehaviour
             win = GameObject.Find("win(Clone)").GetComponent<Transform>();
            
         }
-        if (transform.position.y > player.transform.y)
+        if (transform.position.y > player.position.y && transform.position.y >win.position.y+cameraOffset)
         {
-
+            cameraPos = new Vector3(transform.position.x, player.position.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x, cameraPos.y, -5);
         }
     }
 }
