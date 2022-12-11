@@ -12,7 +12,7 @@ public class CameraTakip2 : MonoBehaviour
 
     private void Awake()
     {
-        player = FindObjectOfType<PlayerController>().transform;
+        player = FindObjectOfType<PlayerController2>().transform;
     }
     void Start()
     {

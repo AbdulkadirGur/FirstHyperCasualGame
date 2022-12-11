@@ -6,17 +6,18 @@ public class PlayerController2 : MonoBehaviour
 {
     public Rigidbody rb;
     bool carpma;
+    
+    float currentTime;
+    bool invincible;
 
-    private void Awake()
-    {
-        rb = GetComponent<Rigidbody>();
-    }
+    public GameObject fireShield;
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -28,6 +29,46 @@ public class PlayerController2 : MonoBehaviour
         {
             carpma = false;
         }
+
+        if (invincible)
+        {
+            currentTime = Time.deltaTime * .35f;
+            if (!fireShield.activeInHierarchy)
+            {
+                fireShield.SetActive(true);
+            }
+        }
+        else
+        {
+            if (fireShield.activeInHierarchy)
+            {
+                fireShield.SetActive(false);
+            }
+            if (carpma)
+            {
+                currentTime += Time.deltaTime * 0.8f;
+            }
+            else
+            {
+                currentTime -= Time.deltaTime * 0.5f;
+             }
+        }
+
+
+        
+        if (currentTime >= 1)
+        {
+            currentTime = 1;
+            invincible = true;
+            Debug.Log("Invicible");
+        }
+        else if(currentTime <= 0)
+        {
+            currentTime = 0;
+            invincible = false;
+            Debug.Log("====================");
+        }
+        
     }
 
     private void FixedUpdate()
@@ -47,14 +88,26 @@ public class PlayerController2 : MonoBehaviour
         }
         else
         {
-            if (collision.gameObject.tag=="enemy")
+            if (invincible)
             {
-                Destroy(collision.gameObject);
+                if (collision.gameObject.tag == "enemy" ||  collision.gameObject.tag == "plane")
+                {
+                    Destroy(collision.transform.parent.gameObject);
+                }
             }
-            else if (collision.gameObject.tag == "plane")
+            else
             {
-                Debug.Log("GameOver");
+                if (collision.gameObject.tag=="enemy")
+                {
+                     Destroy(collision.transform.parent.gameObject);
+                }
+                 else if (collision.gameObject.tag == "plane")
+                 {
+                    Debug.Log("GameOver");
+                 }
             }
+
+            
         }
     }
     private void OnCollisionStay(Collision collision)
