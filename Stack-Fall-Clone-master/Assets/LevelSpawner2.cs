@@ -27,7 +27,7 @@ public class LevelSpawner2 : MonoBehaviour
 
         randomObstaclegenerator();
         float randomNumber = Random.value;
-        for (obstacleNumber = 0; obstacleNumber > -level - addNumber; obstacleNumber -= 0.5f) // 0.5 cunku her tbaapklarin arasinda o kadar mesafe istiyo  ruz
+        for (obstacleNumber = 0; obstacleNumber > -level - addNumber; obstacleNumber -= 0.5f) 
         {
             if (level <= 20)
             {

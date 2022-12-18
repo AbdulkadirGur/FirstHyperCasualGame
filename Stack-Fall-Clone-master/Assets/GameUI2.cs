@@ -39,11 +39,11 @@ public class GameUI2 : MonoBehaviour
 
         nextLevelImg.color = playerMat.color;
 
-        SoundONBTN.GetComponent<Button>().onClick.AddListener((() => SoundManager2.instance.soundOnOff()));   //      important
+        SoundONBTN.GetComponent<Button>().onClick.AddListener((() => SoundManager2.instance.soundOnOff()));   
         SoundOFFBTN.GetComponent<Button>().onClick.AddListener((() => SoundManager2.instance.soundOnOff()));
 
         //PlayerPrefs.DeleteAll();
-        //Bir defaya mahsus siliyoruz obsatcelelari
+        
     }
 
     
