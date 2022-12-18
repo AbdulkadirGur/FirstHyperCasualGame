@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4264818134662175442}
   - component: {fileID: 2299849233295747019}
   - component: {fileID: 5856128031623224900}
-  - component: {fileID: 5588386705544296809}
+  - component: {fileID: 3424601772920613824}
   m_Layer: 0
   m_Name: 2
   m_TagString: plane
@@ -58,6 +58,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -82,6 +83,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &2299849233295747019
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -112,7 +114,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5588386705544296809
+--- !u!114 &3424601772920613824
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,7 +123,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4264818134659908624}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b8d01a1a3870024f916cc94be1071e5, type: 3}
+  m_Script: {fileID: 11500000, guid: 669047cac45d5344687edd02627da315, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4264818134659908626
@@ -137,7 +139,7 @@ GameObject:
   - component: {fileID: 4264818134662175444}
   - component: {fileID: 3350262912375608274}
   - component: {fileID: 6842103798367574801}
-  - component: {fileID: 8856348149783861878}
+  - component: {fileID: 1106377955051267009}
   m_Layer: 0
   m_Name: 6
   m_TagString: enemy
@@ -182,6 +184,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -206,6 +209,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &3350262912375608274
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -236,7 +240,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8856348149783861878
+--- !u!114 &1106377955051267009
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -245,7 +249,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4264818134659908626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b8d01a1a3870024f916cc94be1071e5, type: 3}
+  m_Script: {fileID: 11500000, guid: 669047cac45d5344687edd02627da315, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4264818134659908628
@@ -261,7 +265,7 @@ GameObject:
   - component: {fileID: 4264818134662175446}
   - component: {fileID: 3391400362842612096}
   - component: {fileID: 3465618330358273687}
-  - component: {fileID: 922837696230228758}
+  - component: {fileID: 2253675266254479021}
   m_Layer: 0
   m_Name: 1
   m_TagString: plane
@@ -306,6 +310,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -330,6 +335,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &3391400362842612096
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -360,7 +366,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &922837696230228758
+--- !u!114 &2253675266254479021
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -369,7 +375,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4264818134659908628}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b8d01a1a3870024f916cc94be1071e5, type: 3}
+  m_Script: {fileID: 11500000, guid: 669047cac45d5344687edd02627da315, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4264818134659908630
@@ -381,7 +387,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4264818134659881014}
-  - component: {fileID: 6556993637684160545}
+  - component: {fileID: 2176840146827966053}
   m_Layer: 0
   m_Name: hex 7
   m_TagString: Untagged
@@ -409,7 +415,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6556993637684160545
+--- !u!114 &2176840146827966053
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -418,16 +424,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 4264818134659908630}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78d0cfe09a5dfb94e8b44e9e93a39f57, type: 3}
+  m_Script: {fileID: 11500000, guid: 6afb3de7e48377c448e5b859860e92b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   obstacles:
-  - {fileID: 922837696230228758}
-  - {fileID: 5588386705544296809}
-  - {fileID: 6616526293616270276}
-  - {fileID: 1200412321355594536}
-  - {fileID: 2416074788776765815}
-  - {fileID: 8856348149783861878}
+  - {fileID: 2253675266254479021}
+  - {fileID: 3424601772920613824}
+  - {fileID: 2754576710606328176}
+  - {fileID: 2077416626504075803}
+  - {fileID: 4489708978091780783}
+  - {fileID: 1106377955051267009}
 --- !u!1 &4264818134659908634
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,7 +447,7 @@ GameObject:
   - component: {fileID: 4264818134662175452}
   - component: {fileID: 1834409354881907603}
   - component: {fileID: 1646675533199002244}
-  - component: {fileID: 2416074788776765815}
+  - component: {fileID: 4489708978091780783}
   m_Layer: 0
   m_Name: 5
   m_TagString: enemy
@@ -486,6 +492,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -510,6 +517,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &1834409354881907603
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -540,7 +548,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2416074788776765815
+--- !u!114 &4489708978091780783
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -549,7 +557,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4264818134659908634}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b8d01a1a3870024f916cc94be1071e5, type: 3}
+  m_Script: {fileID: 11500000, guid: 669047cac45d5344687edd02627da315, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4264818134659908636
@@ -565,7 +573,7 @@ GameObject:
   - component: {fileID: 4264818134662175454}
   - component: {fileID: 1869344337040122949}
   - component: {fileID: 5780598514616239557}
-  - component: {fileID: 1200412321355594536}
+  - component: {fileID: 2077416626504075803}
   m_Layer: 0
   m_Name: 4
   m_TagString: enemy
@@ -610,6 +618,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -634,6 +643,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &1869344337040122949
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -664,7 +674,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1200412321355594536
+--- !u!114 &2077416626504075803
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -673,7 +683,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4264818134659908636}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b8d01a1a3870024f916cc94be1071e5, type: 3}
+  m_Script: {fileID: 11500000, guid: 669047cac45d5344687edd02627da315, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4264818134659908638
@@ -689,7 +699,7 @@ GameObject:
   - component: {fileID: 4264818134662175440}
   - component: {fileID: 997980135267138805}
   - component: {fileID: 2178227144846397874}
-  - component: {fileID: 6616526293616270276}
+  - component: {fileID: 2754576710606328176}
   m_Layer: 0
   m_Name: 3
   m_TagString: enemy
@@ -734,6 +744,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -758,6 +769,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &997980135267138805
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -788,7 +800,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6616526293616270276
+--- !u!114 &2754576710606328176
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -797,6 +809,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 4264818134659908638}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b8d01a1a3870024f916cc94be1071e5, type: 3}
+  m_Script: {fileID: 11500000, guid: 669047cac45d5344687edd02627da315, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

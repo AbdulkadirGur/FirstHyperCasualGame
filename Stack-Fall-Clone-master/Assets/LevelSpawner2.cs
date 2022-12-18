@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelSpawner2 : MonoBehaviour
 {
@@ -12,11 +13,18 @@ public class LevelSpawner2 : MonoBehaviour
 
     private GameObject temp1Obstacle, temp2Obstacle;
 
-    private int level = 50, addNumber = 7 ;
+    private int level = 1, addNumber = 7 ;
 
-    float obstacleNumber;
-    void Start()
+    float obstacleNumber = 0;
+
+    public Material plateMat, baseMat;
+    public MeshRenderer playerMeshRenderer;
+
+    void Awake()
     {
+        level = PlayerPrefs.GetInt("Level", 1);
+
+
         randomObstaclegenerator();
         float randomNumber = Random.value;
         for (obstacleNumber = 0; obstacleNumber > -level - addNumber; obstacleNumber -= 0.5f) // 0.5 cunku her tbaapklarin arasinda o kadar mesafe istiyo  ruz
@@ -46,7 +54,7 @@ public class LevelSpawner2 : MonoBehaviour
 
 
 
-            if (Mathf.Abs(obstacleNumber) >= level * .3f && Mathf.Abs(obstacleNumber) <= level * .6f)
+            if (Mathf.Abs(obstacleNumber) >= level * 0.3f && Mathf.Abs(obstacleNumber) <= level * 0.6f)
             {
                 temp1Obstacle.transform.eulerAngles = new Vector3(0, obstacleNumber * 8, 0);
                 temp1Obstacle.transform.eulerAngles += Vector3.up * 180;
@@ -61,12 +69,6 @@ public class LevelSpawner2 : MonoBehaviour
 
             }
 
-
-
-
-
-
-
             temp1Obstacle.transform.parent = FindObjectOfType<RotateManager2>().transform;// Rotate 
         }
 
@@ -78,7 +80,12 @@ public class LevelSpawner2 : MonoBehaviour
     
     void Update()
     {
-        
+        if (Input.GetMouseButtonDown(0))
+        {
+            plateMat.color = Random.ColorHSV(0, 1, 0.5f, 1, 1, 1);
+            baseMat.color = plateMat.color + Color.gray;
+            playerMeshRenderer.material.color = baseMat.color;
+        }
     }
 
     public void randomObstaclegenerator()
@@ -123,5 +130,11 @@ public class LevelSpawner2 : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    public void NextLevel()
+    {
+        PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Level") + 1);
+        SceneManager.LoadScene(0);
     }
 }
