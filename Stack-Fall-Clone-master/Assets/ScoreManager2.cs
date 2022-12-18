@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class ScoreManager2 : MonoBehaviour
 {
-    public  static ScoreManager2 instance;
+    public  static ScoreManager2 instance2;
 
     public int score;
     
@@ -20,13 +20,13 @@ public class ScoreManager2 : MonoBehaviour
 
     private void makeSingleton()
     {
-        if (instance != null)
+        if (instance2 != null)
         {
             Destroy(gameObject);
         }
         else
         {
-            instance = this;
+            instance2 = this;
             DontDestroyOnLoad(this);
         }
     }

@@ -123,7 +123,7 @@ public class PlayerController2 : MonoBehaviour
 
             }
 
-        }
+        }   
 
         /*if(playerstate == PlayerState.Prepare)
         {
@@ -150,12 +150,12 @@ public class PlayerController2 : MonoBehaviour
     {
         if (invincible)
         {
-            ScoreManager2.instance.addScore(2);
+            ScoreManager2.instance2.addScore(2);
 
         }
         else
         {
-            ScoreManager2.instance.addScore(1 );        
+            ScoreManager2.instance2.addScore(1 );        
         }
     }
     private void FixedUpdate()
@@ -207,7 +207,7 @@ public class PlayerController2 : MonoBehaviour
                     gameOverUI.SetActive(true);
                     playerstate = PlayerState.Finish;
                     gameObject.GetComponent<Rigidbody>().isKinematic = true;
-                    ScoreManager2.instance.resetScore();
+                    ScoreManager2.instance2.resetScore();
                     SoundManager2.instance.playSoundFX(death, 0.5f);
                  }
             }
@@ -225,7 +225,7 @@ public class PlayerController2 : MonoBehaviour
             playerstate = PlayerState.Finish;
             SoundManager2.instance.playSoundFX(win, 0.5f);
             finisUI.SetActive(true);
-            finisUI.transform.GetChild(0).GetComponent<Text>().text = "Level" + PlayerPrefs.GetInt("Level",0);
+            finisUI.transform.GetChild(0).GetComponent<Text>().text = "Level" + PlayerPrefs.GetInt("Level",1);
         }
     }
     private void OnCollisionStay(Collision collision)
