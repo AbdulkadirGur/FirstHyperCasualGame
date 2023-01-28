@@ -42,6 +42,7 @@ public class GameUI2 : MonoBehaviour
         SoundONBTN.GetComponent<Button>().onClick.AddListener((() => SoundManager2.instance.soundOnOff()));   
         SoundOFFBTN.GetComponent<Button>().onClick.AddListener((() => SoundManager2.instance.soundOnOff()));
 
+        //tum local data prefs sil
         //PlayerPrefs.DeleteAll();
         
     }
